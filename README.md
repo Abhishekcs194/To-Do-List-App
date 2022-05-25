@@ -1,13 +1,3 @@
-# To-Do-List-App
-- Functionalities to add in the application:
-- Deadlines for tasks
-- Priorities
-- Classifications
-- checkboxes to mark as done
-- delegation of tasks
-- concurrency detection
-- credentials and login
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
