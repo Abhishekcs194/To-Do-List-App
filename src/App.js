@@ -1,6 +1,7 @@
-import logo from './logo.svg';
+
 import './App.css';
 
+<<<<<<< Updated upstream
 function App() {
   return (
     <div className="App">
@@ -18,8 +19,21 @@ function App() {
           Learn React
         </a>
       </header>
+=======
+import { useState } from "react"
+import TodoForm from './components/TodoForm';
+import TodoList from './components/TodoList';
+
+function App() {
+
+
+  return (
+    <div className='togo-app'>
+      <TodoList />
+>>>>>>> Stashed changes
     </div>
   );
+    
 }
 
 export default App;
