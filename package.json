@@ -8,7 +8,8 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "react-scripts": "5.0.1",
+    "react-icons": "^4.3.1",
+    "react-scripts": "^2.1.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -34,5 +35,21 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+    "eslint": "^8.16.0",
+    "eslint-plugin-react": "^7.30.0"
+  },
+  "description": "- Functionalities to add in the application:\r - Deadlines for tasks\r - Priorities\r - Classifications\r - checkboxes to mark as done\r - delegation of tasks\r - concurrency detection\r - credentials and login",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abhishekcs194/To-Do-List-App.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abhishekcs194/To-Do-List-App/issues"
+  },
+  "homepage": "https://github.com/Abhishekcs194/To-Do-List-App#readme"
 }
