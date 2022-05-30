@@ -40,8 +40,7 @@ function TodoForm(props) {
           </button>
         </>
       ) : (
-        <div className='input-field'>
-        
+        <>
           <input
             placeholder='Add a todo'
             value={input}
@@ -53,7 +52,7 @@ function TodoForm(props) {
           <button onClick={handleSubmit} className='todo-button'>
             Add todo
           </button>
-        </div>
+        </>
       )}
     </form>
   );
