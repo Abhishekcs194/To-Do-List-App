@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import TodoForm from './TodoForm';
 import Todo from './Todo';
-import axios from 'axios';
-
+import axios from "axios";
 
 
 
@@ -11,6 +10,15 @@ function TodoList() {
   const [todos, setTodos] = useState([]);
 
   const [isLoaded, setIsLoaded] = useState(false);
+
+
+
+  useEffect(()=>{
+    axios.get("http://localhost:9090/todos")
+    .then((res)=> console.log(res.data))
+    .catch((err)=>console.log(err))
+  })
+  
 
   useEffect(()=>{
     const todosString = window.localStorage.todos;
