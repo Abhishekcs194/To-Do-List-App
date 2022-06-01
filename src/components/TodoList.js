@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import TodoForm from "./TodoForm";
 import Todo from "./Todo";
@@ -9,6 +10,7 @@ function TodoList() {
 
   // Flag to wait for loading
   const [isLoaded, setIsLoaded] = useState(false);
+
 
   // useEffect called once after the component is loaded
   useEffect(() => {
@@ -25,7 +27,7 @@ function TodoList() {
       setIsLoaded(true);
     } catch (e) {
       console.error(e);
-    }
+
   };
 
   /**
