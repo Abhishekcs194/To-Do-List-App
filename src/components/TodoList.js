@@ -15,7 +15,8 @@ function TodoList() {
   // useEffect called once after the component is loaded
   useEffect(() => {
     loadTodos();
-  }, []);
+   // eslint-disable-next-line
+  }, [] ) ;
 
   /**
    * Load todos and update list for ui

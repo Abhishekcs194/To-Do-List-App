@@ -19,7 +19,7 @@
     "react-bootstrap": "^2.4.0",
     "react-dom": "^18.1.0",
     "react-icons": "^4.3.1",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
   "lint-staged": {
@@ -64,7 +64,7 @@
   "bugs": {
     "url": "https://github.com/Abhishekcs194/To-Do-List-App/issues"
   },
-  "proxy": "http://localhost:8080",
+ 
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
