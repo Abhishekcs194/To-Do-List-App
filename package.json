@@ -9,7 +9,10 @@
     "axios": "^0.27.2",
     "bootstrap": "^5.2.0-beta1",
     "eslint-config-react-app": "^7.0.1",
+    "husky": "^8.0.1",
     "include-media": "^1.4.10",
+    "lint-staged": "^12.5.0",
+    "prettier": "^2.6.2",
     "puppeteer": "^14.1.2",
     "puppeteer-core": "^14.1.1",
     "react": "^18.1.0",
@@ -19,12 +22,18 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
   },
   "eslintConfig": {
     "extends": [
@@ -54,5 +63,11 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Abhishekcs194/To-Do-List-App/issues"
+  },
+  "proxy": "http://localhost:8080",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
