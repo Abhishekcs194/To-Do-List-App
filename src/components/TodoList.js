@@ -16,29 +16,19 @@ function TodoList() {
   // Flag to wait for loading
   const [isLoaded, setIsLoaded] = useState(false);
 
-  /////////////////////
-
-
-  // useEffect(()=>{
-  //   axios.get("http://localhost:9090/")
-  //   .then((res)=> console.log(res.data))
-  //   .catch((err)=>console.log(err))
-  // })
-  
-
-
-  /////////////////////
-
   // useEffect called once after the component is loaded
   useEffect(() => {
     loadTodos();
-   // eslint-disable-next-line
+  //  eslint-disable-next-line
   }, [] ) ;
+
+ 
 
   /**
    * Load todos and update list for ui
    */
   const loadTodos = async () => {
+    
     try {
       const { data } = await axios.get("/api/todos");
       setTodos(data);
@@ -47,6 +37,8 @@ function TodoList() {
       console.error(e);
 
   };
+
+  
 
   // /**
   //  * Add Todo
@@ -82,7 +74,7 @@ function TodoList() {
   //  */
   const updateTodo = async (todoId, newValue) => {
     if (!newValue.text || /^\s*$/.test(newValue.text)) {
-      return true;
+      return;
     }
 
     try {
