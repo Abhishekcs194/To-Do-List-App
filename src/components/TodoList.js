@@ -4,6 +4,11 @@ import TodoForm from "./TodoForm";
 import Todo from "./Todo";
 import axios from "axios";
 
+
+
+
+
+
 function TodoList() {
   // Store the todos
   const [todos, setTodos] = useState([]);
@@ -11,6 +16,18 @@ function TodoList() {
   // Flag to wait for loading
   const [isLoaded, setIsLoaded] = useState(false);
 
+  /////////////////////
+
+
+  // useEffect(()=>{
+  //   axios.get("http://localhost:9090/")
+  //   .then((res)=> console.log(res.data))
+  //   .catch((err)=>console.log(err))
+  // })
+  
+
+
+  /////////////////////
 
   // useEffect called once after the component is loaded
   useEffect(() => {
@@ -31,11 +48,11 @@ function TodoList() {
 
   };
 
-  /**
-   * Add Todo
-   * @param {*} todo
-   * @returns
-   */
+  // /**
+  //  * Add Todo
+  //  * @param {*} todo
+  //  * @returns
+  //  */
   const addTodo = async (todo) => {
     if (!todo.text || /^\s*$/.test(todo.text)) {
       return;
@@ -57,15 +74,15 @@ function TodoList() {
     }
   };
 
-  /**
-   * Update a todo with id
-   * @param {*} todoId
-   * @param {*} newValue
-   * @returns
-   */
+  // /**
+  //  * Update a todo with id
+  //  * @param {*} todoId
+  //  * @param {*} newValue
+  //  * @returns
+  //  */
   const updateTodo = async (todoId, newValue) => {
     if (!newValue.text || /^\s*$/.test(newValue.text)) {
-      return;
+      return true;
     }
 
     try {
@@ -85,10 +102,10 @@ function TodoList() {
     }
   };
 
-  /**
-   * Remove todo item
-   * @param {*} _id
-   */
+  // /**
+  //  * Remove todo item
+  //  * @param {*} _id
+  //  */
   const removeTodo = async (_id) => {
     try {
       // Axios POST data to api and get response object
@@ -102,10 +119,10 @@ function TodoList() {
     }
   };
 
-  /**
-   * Toggle todo status
-   * @param {*} id
-   */
+  // /**
+  //  * Toggle todo status
+  //  * @param {*} id
+  //  */
   const completeTodo = (id) => {
     let updatedTodos = todos.map((todo) => {
       if (todo._id === id) {
@@ -127,7 +144,7 @@ function TodoList() {
   }
 
   return (
-    <>
+    <div>
       <h1>What&apos;s the Plan for Today?</h1>
       <TodoForm onSubmit={addTodo} />
       <Todo
@@ -136,7 +153,7 @@ function TodoList() {
         removeTodo={removeTodo}
         updateTodo={updateTodo}
       />
-    </>
+    </div>
   );
 }
 }
