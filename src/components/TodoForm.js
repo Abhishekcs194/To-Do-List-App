@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { VscAdd } from 'react-icons/vsc';
 
 function TodoForm(props) {
   const [input, setInput] = useState(props.edit ? props.edit.value : '');
@@ -50,7 +51,7 @@ function TodoForm(props) {
             ref={inputRef}
           />
           <button onClick={handleSubmit} className='todo-button'>
-            Add todo
+            <VscAdd/>
           </button>
         </>
       )}
