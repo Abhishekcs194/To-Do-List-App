@@ -37,7 +37,7 @@ function TodoList() {
       console.error(e);
 
   };
-
+console.log(axios.get("/api/todos"));
   
 
   // /**
