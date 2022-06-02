@@ -66,7 +66,6 @@
   "bugs": {
     "url": "https://github.com/Abhishekcs194/To-Do-List-App/issues"
   },
-  "proxy": "http://localhost:9090",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"

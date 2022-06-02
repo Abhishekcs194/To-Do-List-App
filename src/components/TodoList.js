@@ -4,8 +4,7 @@ import TodoForm from "./TodoForm";
 import Todo from "./Todo";
 import axios from "axios";
 
-
-
+axios.defaults.baseURL = process.env.REACT_APP_API_HOST
 
 
 
@@ -32,12 +31,12 @@ function TodoList() {
     try {
       const { data } = await axios.get("/api/todos");
       setTodos(data);
+      console.log(data);
       setIsLoaded(true);
     } catch (e) {
       console.error(e);
-
+    }
   };
-console.log(axios.get("/api/todos"));
   
 
   // /**
@@ -103,8 +102,12 @@ console.log(axios.get("/api/todos"));
       // Axios POST data to api and get response object
       await axios.delete(`/api/todos/${_id}`);
 
-      const removedArr = [...todos].filter((todo) => todo._id !== _id);
+      const removedArr = [...todos].filter(function(todo){
+        return todo._id !== _id
+    });
 
+
+      
       setTodos(removedArr);
     } catch (e) {
       console.log(e);
@@ -147,6 +150,5 @@ console.log(axios.get("/api/todos"));
       />
     </div>
   );
-}
 }
 export default TodoList;
