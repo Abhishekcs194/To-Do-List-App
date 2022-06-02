@@ -47,6 +47,7 @@ function TodoList() {
   const addTodo = async (todo) => {
     if (!todo.text || /^\s*$/.test(todo.text)) {
       return;
+      
     }
     try {
       // Axios POST data to api and get response object

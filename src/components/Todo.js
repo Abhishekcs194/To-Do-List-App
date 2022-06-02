@@ -26,10 +26,10 @@ const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
       className={todo.isComplete ? "todo-row complete" : "todo-row"}
       key={todo._id}
     >
-      <div onClick={() => completeTodo(todo._id)}>{todo.text}</div>
+      <div onClick={() => completeTodo(todo._id) }>{todo.text}</div>
       <div className="icons">
         <RiCloseCircleLine
-          onClick={() => removeTodo(todo._id)}
+          onClick={() => removeTodo(todo._id)} 
           className="delete-icon"
         />
         <TiEdit
