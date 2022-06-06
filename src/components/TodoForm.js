@@ -36,7 +36,7 @@ function TodoForm(props) {
             ref={inputRef}
             className="todo-input edit"
           />
-          <button onClick={handleSubmit} className="todo-button edit">
+          <button onClick={()=> window.location.reload()} className="todo-button edit">
             Update
           </button>
         </>
@@ -50,7 +50,7 @@ function TodoForm(props) {
             className="todo-input"
             ref={inputRef}
           />
-          <button onClick={handleSubmit} className="todo-button">
+          <button onClick={()=> window.location.reload()} className="todo-button">
             <VscAdd />
           </button>
         </>
