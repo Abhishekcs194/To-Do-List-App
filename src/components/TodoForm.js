@@ -36,11 +36,7 @@ function TodoForm(props) {
             ref={inputRef}
             className="todo-input edit"
           />
-<<<<<<< Updated upstream
-          <button onClick={handleSubmit} className="todo-button edit">
-=======
           <button onClick={() => window.location.reload()} className="todo-button edit">
->>>>>>> Stashed changes
             Update
           </button>
         </>
@@ -54,11 +50,7 @@ function TodoForm(props) {
             className="todo-input"
             ref={inputRef}
           />
-<<<<<<< Updated upstream
-          <button onClick={handleSubmit} className="todo-button">
-=======
           <button onClick={() => window.location.reload()} className="todo-button">
->>>>>>> Stashed changes
             <VscAdd />
           </button>
         </>
